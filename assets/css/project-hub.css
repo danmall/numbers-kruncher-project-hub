@@ -215,7 +215,7 @@ main {
 }
 @media (min-width: 1000px) {
   main {
-    margin-left: 6.25rem;
+    margin: 0 6.25rem;
   }
 }
 

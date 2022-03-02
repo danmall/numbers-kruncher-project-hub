@@ -47,7 +47,7 @@ main {
 	max-width: 76.875rem;
 	position: relative;
 	@include respond-to(gulf) {
-		margin-left: 6.25rem;
+		margin: 0 6.25rem;
 	}
 }
 
