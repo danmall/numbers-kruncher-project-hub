@@ -2,6 +2,7 @@ html {
 	color: var(--global-color-brand-primary, var(--primary));
 	background-color: var(--background);
 	font-family: var(--body);
+	font-weight: 100;
 }
 * {
 	transition: 0.5s ease all;
@@ -18,10 +19,15 @@ h6 {
 
 h1 {
 	font-weight: bold;
+	font-size: clamp(7.2rem, 10vw, 14.4rem);
+	letter-spacing: -0.05em;
+	line-height: var(--step-2);
 }
 
 h2 {
 	font-size: var(--step-1);
+	letter-spacing: -0.05em;
+	font-weight: 500;
 }
 
 h3 {

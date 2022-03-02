@@ -33,21 +33,18 @@ $breakpoints: (
 	//Font Sizes
 	--step--1: 0.75rem;
 	--base: 16px;
-	--step-0: 1.125rem;
-	--step-1: 2rem;
-	--step-2: 4rem;
-	@include respond-to(gulf) {
-		--step-2: 10rem;
-	}
+	--step-0: clamp(1rem, 5vw, 1.6rem);
+	--step-1: clamp(2rem, 2vw, 2.4rem);
+	--step-2: clamp(7.2rem, 10vw, 14.4rem);
 	--line-height: 1.375rem;
 
 	//Font Families
-	--headings: "Ecra", sans-serif;
-	--body: "Fabriga", serif;
+	--body: "Ecra", sans-serif;
+	--headings: "Fabriga", serif;
 	--monospace: "Space Mono", monospace;
 
 	//Spacing
-	--padding: 1.125rem;
+	--padding: clamp(1rem, 5vw, 1.6rem);
 
 	//Icons
 	--complete: url("data:image/svg+xml,%3Csvg width='17' height='18' viewBox='0 0 17 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.11269' y='9.3032' width='9' height='3' transform='rotate(40 2.11269 9.3032)' fill='%23141E27'/%3E%3Crect x='4.78059' y='15.4581' width='14' height='3' transform='rotate(-50 4.78059 15.4581)' fill='%23141E27'/%3E%3C/svg%3E%0A");
