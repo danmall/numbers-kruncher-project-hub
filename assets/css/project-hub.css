@@ -232,6 +232,7 @@ svg .sf-mark {
 ul,
 ol {
   list-style: none;
+  line-height: 2rem;
 }
 
 ul li:before {
