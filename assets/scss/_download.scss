@@ -1,0 +1,23 @@
+.download {
+	background-color: var(--primary);
+	color: var(--background);
+	display: flex;
+	align-items: center;
+	padding: var(--padding);
+	a {
+		color: var(--background);
+		font-size: var(--step-0);
+		margin-left: 1rem;
+		text-decoration: none;
+	}
+}
+
+.entry-future .download {
+	background-color: var(--primary-dim);
+	svg path {
+		fill: var(--detail);
+	}
+	a {
+		filter: brightness(85%);
+	}
+}

@@ -1,0 +1,54 @@
+/*
+This map is used for a mobile first responsive coding
+approach mixin in _mixins.scss. Breakpoint names are
+inspired by bodies of water, because they expand and
+shrink with the weather. These denote some default
+screen breaks. More can be added if needed.
+
+Vocabulary options: pond, brook, creek, gulf, sea.
+*/
+$breakpoints: (
+	"stream": 320px,
+	"brook": 500px,
+	"pond": 700px,
+	"river": 800px,
+	"gulf": 1000px,
+	"sea": 1440px,
+	"ocean": 1600px,
+);
+
+/// This a a map of the theme colours.
+/// Never name variables by colour, instead use names
+/// that signify their usage.
+
+:root {
+	//Colours
+	--primary: #31cfb5;
+	--primary-dim: #22766e;
+	--secondary: #37526a;
+	--detail: #3a4147;
+	--background: #141e27;
+	--light: #fff;
+
+	//Font Sizes
+	--step--1: 0.75rem;
+	--base: 16px;
+	--step-0: 1.125rem;
+	--step-1: 2rem;
+	--step-2: 4rem;
+	@include respond-to(gulf) {
+		--step-2: 10rem;
+	}
+	--line-height: 1.375rem;
+
+	//Font Families
+	--headings: "Ecra", sans-serif;
+	--body: "Fabriga", serif;
+	--monospace: "Space Mono", monospace;
+
+	//Spacing
+	--padding: 1.125rem;
+
+	//Icons
+	--complete: url("data:image/svg+xml,%3Csvg width='17' height='18' viewBox='0 0 17 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.11269' y='9.3032' width='9' height='3' transform='rotate(40 2.11269 9.3032)' fill='%23141E27'/%3E%3Crect x='4.78059' y='15.4581' width='14' height='3' transform='rotate(-50 4.78059 15.4581)' fill='%23141E27'/%3E%3C/svg%3E%0A");
+}

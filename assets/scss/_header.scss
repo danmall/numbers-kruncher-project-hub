@@ -1,0 +1,66 @@
+.page-header {
+	background-color: var(--background);
+	display: grid;
+	padding: 3rem var(--step--1);
+	@include respond-to(gulf) {
+		padding: 5.5rem 6.25rem 8rem 6.25rem;
+	}
+}
+
+.page-header-title {
+	@include respond-to(gulf) {
+		margin-left: calc(12vw - 3.125rem);
+	}
+}
+
+.page-header-subtitle {
+	order: 1;
+	font-size: var(--step--1);
+	text-transform: uppercase;
+	@include respond-to(gulf) {
+		margin-left: 12vw;
+	}
+}
+
+.logo-wrap {
+	order: -1;
+	display: flex;
+	align-items: center;
+	gap: 0.960625rem;
+	margin-bottom: 6.4375rem;
+	.logo {
+		order: -1;
+		line-height: 0;
+	}
+}
+
+.project-title {
+	order: 2;
+	margin-bottom: 2.25rem;
+	font-size: var(--step-2);
+	@include respond-to(gulf) {
+		margin-left: 12vw;
+	}
+}
+
+.quick-links {
+	order: 3;
+	@include respond-to(gulf) {
+		margin-left: 12vw;
+	}
+}
+
+.quick-links {
+	font-family: var(--headings);
+	list-style: none;
+	li {
+		display: inline;
+	}
+	li + li {
+		&:before {
+			content: "●";
+			color: var(--primary);
+			padding: 0 0.42rem 0 0.3rem;
+		}
+	}
+}

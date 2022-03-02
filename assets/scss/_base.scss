@@ -1,0 +1,89 @@
+html {
+	color: var(--primary);
+	background-color: var(--background);
+	font-family: var(--body);
+}
+* {
+	transition: 0.5s ease all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--headings);
+}
+
+h1 {
+	font-weight: bold;
+}
+
+h2 {
+	font-size: var(--step-1);
+}
+
+h3 {
+	font-size: var(--step--1);
+	text-transform: uppercase;
+}
+
+a {
+	color: var(--primary);
+}
+
+main {
+	max-width: 76.875rem;
+	position: relative;
+	@include respond-to(gulf) {
+		margin-left: 6.25rem;
+	}
+}
+
+svg {
+	.sf-mark {
+		fill: var(--primary);
+	}
+	.sf-background {
+		fill: var(--background);
+	}
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+ul {
+	li {
+		&:before {
+			content: "●";
+			color: var(--light);
+			display: inline-block;
+			width: 1em;
+			margin-left: -1em;
+		}
+	}
+}
+
+ol {
+	counter-reset: li;
+	li {
+		counter-increment: li;
+		&:before {
+			content: "." counter(li);
+			color: var(--light);
+			display: inline-block;
+			width: 1em;
+			margin-left: -1.5em;
+			margin-right: 0.5em;
+			text-align: right;
+			direction: rtl;
+		}
+	}
+}
+
+p + p {
+	margin-top: 1rem;
+}

@@ -1,0 +1,406 @@
+@charset "UTF-8";
+/*
+This map is used for a mobile first responsive coding
+approach mixin in _mixins.scss. Breakpoint names are
+inspired by bodies of water, because they expand and
+shrink with the weather. These denote some default
+screen breaks. More can be added if needed.
+
+Vocabulary options: pond, brook, creek, gulf, sea.
+*/
+:root {
+  --primary: #31cfb5;
+  --primary-dim: #22766e;
+  --secondary: #37526a;
+  --detail: #3a4147;
+  --background: #141e27;
+  --light: #fff;
+  --step--1: 0.75rem;
+  --base: 16px;
+  --step-0: 1.125rem;
+  --step-1: 2rem;
+  --step-2: 4rem;
+  --line-height: 1.375rem;
+  --headings: "Ecra", sans-serif;
+  --body: "Fabriga", serif;
+  --monospace: "Space Mono", monospace;
+  --padding: 1.125rem;
+  --complete: url("data:image/svg+xml,%3Csvg width='17' height='18' viewBox='0 0 17 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.11269' y='9.3032' width='9' height='3' transform='rotate(40 2.11269 9.3032)' fill='%23141E27'/%3E%3Crect x='4.78059' y='15.4581' width='14' height='3' transform='rotate(-50 4.78059 15.4581)' fill='%23141E27'/%3E%3C/svg%3E%0A");
+}
+@media (min-width: 1000px) {
+  :root {
+    --step-2: 10rem;
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  color: var(--primary);
+  background-color: var(--background);
+  font-family: var(--body);
+}
+
+* {
+  transition: 0.5s ease all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings);
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: var(--step-1);
+}
+
+h3 {
+  font-size: var(--step--1);
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--primary);
+}
+
+main {
+  max-width: 76.875rem;
+  position: relative;
+}
+@media (min-width: 1000px) {
+  main {
+    margin-left: 6.25rem;
+  }
+}
+
+svg .sf-mark {
+  fill: var(--primary);
+}
+svg .sf-background {
+  fill: var(--background);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+ul li:before {
+  content: "●";
+  color: var(--light);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+ol {
+  counter-reset: li;
+}
+ol li {
+  counter-increment: li;
+}
+ol li:before {
+  content: "." counter(li);
+  color: var(--light);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  direction: rtl;
+}
+
+p + p {
+  margin-top: 1rem;
+}
+
+.page-header {
+  background-color: var(--background);
+  display: grid;
+  padding: 3rem var(--step--1);
+}
+@media (min-width: 1000px) {
+  .page-header {
+    padding: 5.5rem 6.25rem 8rem 6.25rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .page-header-title {
+    margin-left: calc(12vw - 3.125rem);
+  }
+}
+
+.page-header-subtitle {
+  order: 1;
+  font-size: var(--step--1);
+  text-transform: uppercase;
+}
+@media (min-width: 1000px) {
+  .page-header-subtitle {
+    margin-left: 12vw;
+  }
+}
+
+.logo-wrap {
+  order: -1;
+  display: flex;
+  align-items: center;
+  gap: 0.960625rem;
+  margin-bottom: 6.4375rem;
+}
+.logo-wrap .logo {
+  order: -1;
+  line-height: 0;
+}
+
+.project-title {
+  order: 2;
+  margin-bottom: 2.25rem;
+  font-size: var(--step-2);
+}
+@media (min-width: 1000px) {
+  .project-title {
+    margin-left: 12vw;
+  }
+}
+
+.quick-links {
+  order: 3;
+}
+@media (min-width: 1000px) {
+  .quick-links {
+    margin-left: 12vw;
+  }
+}
+
+.quick-links {
+  font-family: var(--headings);
+  list-style: none;
+}
+.quick-links li {
+  display: inline;
+}
+.quick-links li + li:before {
+  content: "●";
+  color: var(--primary);
+  padding: 0 0.42rem 0 0.3rem;
+}
+
+article {
+  margin: 0 1rem 0 4.6rem;
+  position: relative;
+  padding-top: 2.8125rem;
+}
+article.entry-future {
+  color: var(--primary-dim);
+}
+article:last-of-type:after {
+  display: none;
+}
+article:before {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--background);
+  border-radius: 20px;
+  background: var(--background);
+  position: absolute;
+  left: -3.85rem;
+  top: 3.0125rem;
+}
+article:after {
+  content: "";
+  border: 2px solid var(--detail);
+  left: -2.6rem;
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+  top: 3rem;
+}
+@media (min-width: 1000px) {
+  article {
+    padding-left: calc(12vw - 4.5rem);
+  }
+}
+article .entry-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+article .entry-header .entry-title {
+  font-size: var(--step-1);
+  font-weight: bold;
+}
+article .entry-header .entry-title:before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--primary);
+  border-radius: 20px;
+  background: var(--primary);
+  position: absolute;
+  left: -3.475rem;
+  top: 3.3125rem;
+}
+article .entry-header .entry-title:after {
+  content: var(--complete);
+  width: 9px;
+  height: 14px;
+  position: absolute;
+  left: -47px;
+  top: calc(2.8125rem - 3px);
+}
+article .entry-header .entry-date {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-family: var(--headings);
+  font-weight: bold;
+}
+@media (min-width: 500px) {
+  article .entry-header .entry-date {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+article .entry-header .relative-time {
+  font-family: var(--monospace);
+  font-size: var(--step--1);
+}
+article .entry-content {
+  margin-top: 1.5rem;
+}
+@media (min-width: 500px) {
+  article .entry-content {
+    max-width: 80%;
+  }
+}
+article.entry-future .entry-title:before {
+  border-color: var(--primary);
+  background: transparent;
+}
+article footer {
+  padding-top: 2.5625rem;
+  border-bottom: 1px solid var(--secondary);
+}
+
+.download {
+  background-color: var(--primary);
+  color: var(--background);
+  display: flex;
+  align-items: center;
+  padding: var(--padding);
+}
+.download a {
+  color: var(--background);
+  font-size: var(--step-0);
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.entry-future .download {
+  background-color: var(--primary-dim);
+}
+.entry-future .download svg path {
+  fill: var(--detail);
+}
+.entry-future .download a {
+  filter: brightness(85%);
+}
+
+footer.page-footer {
+  margin-top: 8.75rem;
+  margin-bottom: 5rem;
+  padding: 0 var(--step--1);
+}
+@media (min-width: 1000px) {
+  footer.page-footer {
+    padding: 5.5rem 0 8rem calc(0.25rem + 12vw);
+  }
+}
+
+/*# sourceMappingURL=project-hub.css.map */

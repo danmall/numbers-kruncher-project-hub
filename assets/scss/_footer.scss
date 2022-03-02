@@ -1,0 +1,8 @@
+footer.page-footer {
+	margin-top: 8.75rem;
+	margin-bottom: 5rem;
+	padding: 0 var(--step--1);
+	@include respond-to(gulf) {
+		padding: 5.5rem 0 8rem calc(0.25rem + 12vw);
+	}
+}
