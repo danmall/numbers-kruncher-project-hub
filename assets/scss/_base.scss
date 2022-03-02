@@ -5,7 +5,7 @@ html {
 	font-weight: 100;
 }
 * {
-	transition: 0.5s ease all;
+	// transition: 0.5s ease all;
 }
 
 h1,
@@ -37,6 +37,7 @@ h3 {
 
 a {
 	color: var(--global-color-brand-primary, var(--primary));
+	transition: all 0.25s linear;
 	&:hover {
 		color: var(--light);
 	}
@@ -51,10 +52,14 @@ main {
 }
 
 svg {
-	.sf-mark {
+	path {
+		transition: all 0.25s linear;
+	}
+
+	.sf-background {
 		fill: var(--global-color-brand-primary, var(--primary));
 	}
-	.sf-background {
+	.sf-mark {
 		fill: var(--background);
 	}
 }

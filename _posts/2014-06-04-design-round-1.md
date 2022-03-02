@@ -1,7 +1,7 @@
 ---
 title: Design Round 1
 layout: default
-type: latest
+type: complete
 ---
 
 Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet.

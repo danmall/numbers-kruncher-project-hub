@@ -53,6 +53,17 @@
   font-weight: 700;
   font-style: normal;
 }
+@keyframes bounce2 {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-0.15rem);
+  }
+  60% {
+    transform: translateY(0.05rem);
+  }
+}
 /*
 This map is used for a mobile first responsive coding
 approach mixin in _mixins.scss. Breakpoint names are
@@ -71,14 +82,14 @@ Vocabulary options: pond, brook, creek, gulf, sea.
   --dark: rgba(0, 0, 0, 0.2);
   --step--1: 0.75rem;
   --base: 16px;
-  --step-0: clamp(1rem, 5vw, 1.6rem);
+  --step-0: clamp(1.125rem, 1.2vw, 12rem);
   --step-1: clamp(2rem, 2vw, 2.4rem);
   --step-2: clamp(7.2rem, 10vw, 14.4rem);
   --line-height: 1.375rem;
   --body: "Ecra", sans-serif;
   --headings: "Fabriga", serif;
   --monospace: "Space Mono", monospace;
-  --padding: clamp(1rem, 5vw, 1.6rem);
+  --padding: 1.125rem;
   --complete: url("data:image/svg+xml,%3Csvg width='17' height='18' viewBox='0 0 17 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.11269' y='9.3032' width='9' height='3' transform='rotate(40 2.11269 9.3032)' fill='%23141E27'/%3E%3Crect x='4.78059' y='15.4581' width='14' height='3' transform='rotate(-50 4.78059 15.4581)' fill='%23141E27'/%3E%3C/svg%3E%0A");
 }
 
@@ -163,10 +174,6 @@ html {
   font-weight: 100;
 }
 
-* {
-  transition: 0.5s ease all;
-}
-
 h1,
 h2,
 h3,
@@ -196,6 +203,7 @@ h3 {
 
 a {
   color: var(--global-color-brand-primary, var(--primary));
+  transition: all 0.25s linear;
 }
 a:hover {
   color: var(--light);
@@ -211,10 +219,13 @@ main {
   }
 }
 
-svg .sf-mark {
-  fill: var(--global-color-brand-primary, var(--primary));
+svg path {
+  transition: all 0.25s linear;
 }
 svg .sf-background {
+  fill: var(--global-color-brand-primary, var(--primary));
+}
+svg .sf-mark {
   fill: var(--background);
 }
 
@@ -292,6 +303,9 @@ p + p {
 .logo-wrap .logo {
   order: -1;
   line-height: 0;
+}
+.logo-wrap .logo a:hover svg .sf-background {
+  fill: var(--light);
 }
 
 .project-title {
@@ -427,17 +441,30 @@ article footer {
 }
 
 .download {
-  background-color: var(--global-color-brand-primary, var(--primary));
-  color: var(--background);
   display: flex;
   align-items: center;
+  background-color: var(--global-color-brand-primary, var(--primary));
   padding: var(--padding);
-}
-.download a {
   color: var(--background);
   font-size: var(--step-0);
   margin-left: 1rem;
   text-decoration: none;
+  font-family: var(--headings);
+  font-weight: 500;
+  gap: 1.25rem;
+  transition: all 0.25s ease;
+}
+.download svg {
+  fill: var(--light);
+  transition: all 0.25s ease;
+}
+.download:hover {
+  background-color: var(--light);
+  color: var(--global-color-brand-primary, var(--primary));
+}
+.download:hover svg {
+  animation: bounce2 2s ease infinite;
+  fill: currentColor;
 }
 
 .entry-future .download svg path {

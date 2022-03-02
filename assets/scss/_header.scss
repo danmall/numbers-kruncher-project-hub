@@ -33,6 +33,13 @@
 	.logo {
 		order: -1;
 		line-height: 0;
+		a:hover {
+			svg {
+				.sf-background {
+					fill: var(--light);
+				}
+			}
+		}
 	}
 }
 

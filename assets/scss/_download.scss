@@ -1,14 +1,27 @@
 .download {
-	background-color: var(--global-color-brand-primary, var(--primary));
-	color: var(--background);
 	display: flex;
 	align-items: center;
+	background-color: var(--global-color-brand-primary, var(--primary));
 	padding: var(--padding);
-	a {
-		color: var(--background);
-		font-size: var(--step-0);
-		margin-left: 1rem;
-		text-decoration: none;
+	color: var(--background);
+	font-size: var(--step-0);
+	margin-left: 1rem;
+	text-decoration: none;
+	font-family: var(--headings);
+	font-weight: 500;
+	gap: 1.25rem;
+	transition: all 0.25s ease;
+	svg {
+		fill: var(--light);
+		transition: all 0.25s ease;
+	}
+	&:hover {
+		background-color: var(--light);
+		color: var(--global-color-brand-primary, var(--primary));
+		svg {
+			animation: bounce2 2s ease infinite;
+			fill: currentColor;
+		}
 	}
 }
 
