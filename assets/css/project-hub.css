@@ -406,6 +406,11 @@ article .entry-header .entry-title:after {
   left: -47px;
   top: calc(2.8125rem - 3px);
 }
+@media (min-width: 1700px) {
+  article .entry-header .entry-title:after {
+    top: calc(2.8125rem + 10px);
+  }
+}
 article .entry-header .entry-date {
   display: flex;
   align-items: center;

@@ -61,8 +61,8 @@ article {
 				position: absolute;
 				left: -47px;
 				top: calc(2.8125rem + -3px);
-				@include respond-to(gulf) {
-					// top: calc(2.8125rem + 10px);
+				@include respond-to(ocean) {
+					top: calc(2.8125rem + 10px);
 				}
 			}
 		}
