@@ -5,7 +5,7 @@ publish_mode: editorial_workflow
 media_folder: "assets/imgs/uploads" # Media files will be stored in the repo under images/uploads
 collections:
   - name: "milestones"
-    label: "milestones"
+    label: "Milestones"
     folder: "_posts/"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -15,7 +15,6 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
       - label: "Milestone Type"
         name: "type"
         widget: "select"
@@ -23,3 +22,4 @@ collections:
           - { label: "Latest", value: "latest" }
           - { label: "Future", value: "future" }
           - { label: "Complete", value: "complete" }
+      - { label: "Body", name: "body", widget: "markdown" }
