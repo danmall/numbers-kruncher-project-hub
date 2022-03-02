@@ -48,9 +48,9 @@ article {
 				display: block;
 				width: 32px;
 				height: 32px;
-				border: 2px solid var(--primary);
+				border: 2px solid var(--global-color-brand-primary, var(--primary));
 				border-radius: 20px;
-				background: var(--primary);
+				background: var(--global-color-brand-primary, var(--primary));
 				position: absolute;
 				left: calc((4.6rem - 1.125rem) * -1);
 				top: calc(0.5rem + 2.8125rem);
@@ -87,7 +87,7 @@ article {
 		}
 	}
 	&.entry-future .entry-title:before {
-		border-color: var(--primary);
+		border-color: var(--global-color-brand-primary, var(--primary));
 		background: transparent;
 	}
 	footer {

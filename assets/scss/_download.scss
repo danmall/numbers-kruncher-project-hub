@@ -1,5 +1,5 @@
 .download {
-	background-color: var(--primary);
+	background-color: var(--global-color-brand-primary, var(--primary));
 	color: var(--background);
 	display: flex;
 	align-items: center;

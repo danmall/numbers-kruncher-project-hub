@@ -59,7 +59,7 @@
 	li + li {
 		&:before {
 			content: "●";
-			color: var(--primary);
+			color: var(--global-color-brand-primary, var(--primary));
 			padding: 0 0.42rem 0 0.3rem;
 		}
 	}

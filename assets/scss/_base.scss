@@ -1,5 +1,5 @@
 html {
-	color: var(--primary);
+	color: var(--global-color-brand-primary, var(--primary));
 	background-color: var(--background);
 	font-family: var(--body);
 }
@@ -30,7 +30,7 @@ h3 {
 }
 
 a {
-	color: var(--primary);
+	color: var(--global-color-brand-primary, var(--primary));
 }
 
 main {
@@ -43,7 +43,7 @@ main {
 
 svg {
 	.sf-mark {
-		fill: var(--primary);
+		fill: var(--global-color-brand-primary, var(--primary));
 	}
 	.sf-background {
 		fill: var(--background);
