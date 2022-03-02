@@ -27,4 +27,6 @@ collections:
         name: "files"
         widget: "list"
         summary: "{{fields.image}}"
-        field: { label: File, name: fileupload, widget: file }
+        fields:
+          - { label: File, name: fileupload, widget: file }
+          - { label: File Name, name: filename, widget: string }
