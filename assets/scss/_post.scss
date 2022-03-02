@@ -60,7 +60,10 @@ article {
 				height: 14px;
 				position: absolute;
 				left: -47px;
-				top: calc(2.8125rem + 10px);
+				top: calc(2.8125rem + 5px);
+				@include respond-to(gulf) {
+					// top: calc(2.8125rem + 10px);
+				}
 			}
 		}
 		.entry-date {
