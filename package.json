@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Project Hub",
   "scripts": {
-    "build": "sass assets/scss:assets/css && node bin/arcade.js"
+    "build": "sass assets/scss:assets/css && node bin/arcade.js && jekyll build"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/SuperFriendly/sf-project-hub-template#readme",
   "dependencies": {
+    "jekyll": "^3.0.0-beta1",
     "sass": "^1.49.9"
   },
   "devDependencies": {

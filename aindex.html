@@ -16,33 +16,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="assets/css/variables.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/project-hub.css" rel="stylesheet" type="text/css" />
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 </head>
 
 <body>
 
 	<div class="wrap">
-
-
-
-
 		<header class="page-header" role="banner">
 			<h1 class="project-title">Jarvis, Mark 4 wraps lines</h1>
 			<h2 class="page-header-subtitle">Project Hub for Marvel Studios</h2>
 			<div class="logo-wrap">
-				<h3 class="page-header-title"><img src="assets/imgs/marvelstudios.svg" alt="Marvel Studios"></h3>
-				<p class="logo">
-					<svg width="35" height="44" viewBox="0 0 35 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M34.6303 0H0V32.2665L17.3151 44L34.2608 32.2665L34.6303 0Z" class="sf-mark" />
-						<path d=" M23.8161 9.45461V9.44727H12.844C8.12541 9.44727 8.1254 14.4312 8.1254 14.4312C8.1254 18.2356 10.5897 19.1277
+				<h3 class="page-header-title"><a href=""><img src="assets/imgs/marvelstudios.svg"
+							alt="Marvel Studios"></a></h3>
+				<p class="logo"><a href="https://superfriendly.com/">
+						<svg width="35" height="44" viewBox="0 0 35 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M34.6303 0H0V32.2665L17.3151 44L34.2608 32.2665L34.6303 0Z" class="sf-mark" />
+							<path d=" M23.8161 9.45461V9.44727H12.844C8.12541 9.44727 8.1254 14.4312 8.1254 14.4312C8.1254 18.2356 10.5897 19.1277
 							11.5123 19.3324H7.95312V22.9653C7.95312 25.616 9.85163 26.1162 11.0018
 							26.1755V26.2093H11.8554V26.15V22.9653V22.6881V19.3873L11.872 15.2449C11.872 12.8367 14.9471
 							12.9675 14.9471 12.9675H22.9596V16.2644H15.3734V19.7875H22.9474L22.9444 20.4102C22.9444
 							22.8203 19.8698 22.6881 19.8698 22.6881H15.3734V26.2098H21.9734C26.6915 26.2098 26.6915
 							21.2233 26.6915 21.2233C26.6915 17.0766 23.9913 16.4221 23.3262 16.3192L26.8619
 							16.3109V12.6701C26.8619 10.017 24.9643 9.51732 23.8161 9.45461Z" class="sf-background" />
-					</svg>
-
+						</svg>
+					</a>
 				</p>
 			</div>
 			<nav class="quick-links">
@@ -51,10 +49,6 @@
 				<li><a href="">Project plan v2 Revised</a></li>
 			</nav>
 		</header>
-
-
-
-
 
 		<main role="main" class="main">
 
@@ -237,6 +231,17 @@
 	<script src="//unpkg.com/dayjs@1.8.21/plugin/relativeTime.js"></script>
 	<script src="//unpkg.com/dayjs@1.8.21/plugin/updateLocale.js"></script>
 	<script src="j/project-hub.js"></script>
+	<script>
+		if (window.netlifyIdentity) {
+			window.netlifyIdentity.on("init", user => {
+				if (!user) {
+					window.netlifyIdentity.on("login", () => {
+						document.location.href = "/admin/";
+					});
+				}
+			});
+		}
+	</script>
 </body>
 
 </html>
