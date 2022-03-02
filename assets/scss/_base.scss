@@ -36,7 +36,7 @@ h3 {
 }
 
 a {
-	color: var(--global-color-brand-primary, var(--primary));
+	color: var(--primary);
 	transition: all 0.25s linear;
 	&:hover {
 		color: var(--light);

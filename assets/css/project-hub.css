@@ -74,7 +74,8 @@ screen breaks. More can be added if needed.
 Vocabulary options: pond, brook, creek, gulf, sea.
 */
 :root {
-  --primary: rgb(49, 207, 181);
+  --primary-fallback: rgb(49, 207, 181);
+  --primary: var(--sf-decision-color-mainBrandColor, var(--primary-fallback));
   --secondary: #37526a;
   --detail: #3a4147;
   --background: #141e27;
@@ -202,7 +203,7 @@ h3 {
 }
 
 a {
-  color: var(--global-color-brand-primary, var(--primary));
+  color: var(--primary);
   transition: all 0.25s linear;
 }
 a:hover {

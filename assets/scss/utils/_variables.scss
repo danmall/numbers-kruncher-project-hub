@@ -23,7 +23,8 @@ $breakpoints: (
 
 :root {
 	//Colours
-	--primary: rgb(49, 207, 181);
+	--primary-fallback: rgb(49, 207, 181);
+	--primary: var(--sf-decision-color-mainBrandColor, var(--primary-fallback));
 	--secondary: #37526a;
 	--detail: #3a4147;
 	--background: #141e27;
