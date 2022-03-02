@@ -10,7 +10,7 @@ const ARCADE_KEY = process.env.ARCADE_KEY;
 			"https://api.usearcade.com/api/projects/621efb7aa838720018034d08/tokens/live/export/css/raw",
 			{
 				headers: {
-					authorization: "Bearer " + ARCADE_KEY,
+					authorization: `Bearer ${ARCADE_KEY}`,
 				},
 			},
 		).then(async (r) => {
