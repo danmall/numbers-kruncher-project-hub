@@ -6,7 +6,7 @@ if (ARCADE_KEY) {
 	(async () => {
 		try {
 			const res = await fetch(
-				"https://api.usearcade.com/api/projects/621efb7aa838720018034d08/tokens/live/export/css/raw",
+				"https://api.usearcade.com/api/projects/620d7fd0a3d6810017297563/tokens/live/export/css/raw",
 				{
 					headers: {
 						authorization: `Bearer ${ARCADE_KEY}`,
