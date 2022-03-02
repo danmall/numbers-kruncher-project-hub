@@ -15,7 +15,9 @@
     "url": "https://github.com/SuperFriendly/sf-project-hub-template/issues"
   },
   "homepage": "https://github.com/SuperFriendly/sf-project-hub-template#readme",
-  "dependencies": {},
+  "dependencies": {
+    "sass": "^1.49.9"
+  },
   "devDependencies": {
     "node-fetch": "^2.6.7"
   }
