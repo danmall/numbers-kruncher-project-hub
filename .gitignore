@@ -4,3 +4,4 @@
 .svn
 init.sh
 templates/*
+node_modules
