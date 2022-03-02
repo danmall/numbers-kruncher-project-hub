@@ -4,7 +4,7 @@ article {
 	padding-top: 2.8125rem;
 
 	&.entry-future {
-		color: var(--primary-dim);
+		opacity: 0.55;
 	}
 	&:last-of-type {
 		&:after {

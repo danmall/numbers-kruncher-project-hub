@@ -9,12 +9,13 @@ screen breaks. More can be added if needed.
 Vocabulary options: pond, brook, creek, gulf, sea.
 */
 :root {
-  --primary: #31cfb5;
+  --primary: rgb(49, 207, 181);
   --primary-dim: #22766e;
   --secondary: #37526a;
   --detail: #3a4147;
   --background: #141e27;
   --light: #fff;
+  --dark: rgba(0, 0, 0, 0.2);
   --step--1: 0.75rem;
   --base: 16px;
   --step-0: 1.125rem;
@@ -195,7 +196,7 @@ p + p {
 }
 
 .page-header {
-  background-color: var(--background);
+  background-color: var(--dark);
   display: grid;
   padding: 3rem var(--step--1);
 }
@@ -273,7 +274,7 @@ article {
   padding-top: 2.8125rem;
 }
 article.entry-future {
-  color: var(--primary-dim);
+  opacity: 0.55;
 }
 article:last-of-type:after {
   display: none;
@@ -382,14 +383,11 @@ article footer {
   text-decoration: none;
 }
 
-.entry-future .download {
-  background-color: var(--primary-dim);
-}
 .entry-future .download svg path {
   fill: var(--detail);
 }
 .entry-future .download a {
-  filter: brightness(85%);
+  filter: brightness(0.55);
 }
 
 footer.page-footer {

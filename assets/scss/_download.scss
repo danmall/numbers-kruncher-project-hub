@@ -13,11 +13,10 @@
 }
 
 .entry-future .download {
-	background-color: var(--primary-dim);
 	svg path {
 		fill: var(--detail);
 	}
 	a {
-		filter: brightness(85%);
+		filter: brightness(0.55);
 	}
 }

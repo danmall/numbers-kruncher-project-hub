@@ -1,5 +1,5 @@
 .page-header {
-	background-color: var(--background);
+	background-color: var(--dark);
 	display: grid;
 	padding: 3rem var(--step--1);
 	@include respond-to(gulf) {

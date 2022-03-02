@@ -23,12 +23,13 @@ $breakpoints: (
 
 :root {
 	//Colours
-	--primary: #31cfb5;
+	--primary: rgb(49, 207, 181);
 	--primary-dim: #22766e;
 	--secondary: #37526a;
 	--detail: #3a4147;
 	--background: #141e27;
 	--light: #fff;
+	--dark: rgba(0, 0, 0, 0.2);
 
 	//Font Sizes
 	--step--1: 0.75rem;
