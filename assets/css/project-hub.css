@@ -404,7 +404,7 @@ article .entry-header .entry-title:after {
   height: 14px;
   position: absolute;
   left: -47px;
-  top: calc(2.8125rem + 5px);
+  top: calc(2.8125rem - 3px);
 }
 article .entry-header .entry-date {
   display: flex;
