@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "Project Hub",
   "scripts": {
-    "styles": "sass assets/scss:assets/css",
+    "styles": "sass assets/scss:assets/css --style=compressed",
     "arcade": "node bin/arcade.js",
     "watch": "nodemon -e *.scss -x \"npm run styles\"",
     "serve": "jekyll serve --port 4001",
-    "build": "sass assets/scss:assets/css && node bin/arcade.js && jekyll build"
+    "build": "sass assets/scss:assets/css --style=compressed && node bin/arcade.js && jekyll build"
   },
   "repository": {
     "type": "git",
