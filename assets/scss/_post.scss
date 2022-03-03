@@ -7,7 +7,8 @@ article {
 		opacity: 0.55;
 	}
 	&:last-of-type {
-		&:after {
+		&:after,
+		footer {
 			display: none;
 		}
 	}

@@ -353,7 +353,8 @@ article {
 article.entry-future {
   opacity: 0.55;
 }
-article:last-of-type:after {
+article:last-of-type:after,
+article:last-of-type footer {
   display: none;
 }
 article:before {
