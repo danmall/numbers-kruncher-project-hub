@@ -3,10 +3,10 @@ html {
 	background-color: var(--background);
 	font-family: var(--body);
 	font-weight: 100;
-	font-display: swap;
 }
 * {
 	// transition: 0.5s ease all;
+	font-display: swap;
 }
 
 h1,
