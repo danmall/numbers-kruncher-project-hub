@@ -1,8 +1,8 @@
 ---
-layout: default
-title: Design Round 2
-date: 2022-03-02T21:01:45.974Z
-type: latest
+layout: post
+title: Design Round 3
+date: 2022-03-03T04:56:35.009Z
+type: future
 ---
 
 Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet.
