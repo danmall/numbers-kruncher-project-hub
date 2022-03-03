@@ -22,7 +22,6 @@ var Site = function () {
 				scrollTop: _pointToScrollTo,
 			},
 			2000,
-			"easeInOutQuint",
 		);
 
 		// http://stackoverflow.com/questions/8858994/let-user-scrolling-stop-jquery-animation-of-scrolltop
