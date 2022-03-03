@@ -91,6 +91,7 @@ article {
 			@include respond-to(brook) {
 				flex-direction: column;
 				align-items: flex-start;
+				margin-right: 4.75rem;
 			}
 		}
 		.relative-time {
