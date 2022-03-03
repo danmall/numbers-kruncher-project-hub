@@ -52,12 +52,6 @@ collections:
               default: "default",
             }
           - {
-              label: "SF Logo Link",
-              name: "sflink",
-              widget: "string",
-              default: "https://superfriendly.com/",
-            }
-          - {
               label: "Client Name",
               name: "clientname",
               widget: "string",
@@ -72,3 +66,11 @@ collections:
             fields:
               - { label: Link, name: link, widget: string }
               - { label: Link Text, name: linktext, widget: string }
+          - {
+              label: "SF Logo Link",
+              name: "sflink",
+              widget: "string",
+              default: "https://superfriendly.com/",
+              required: false,
+              hint: "Defaults to superfriendly.com.",
+            }
