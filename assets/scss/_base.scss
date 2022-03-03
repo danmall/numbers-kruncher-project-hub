@@ -101,6 +101,11 @@ ol {
 	}
 }
 
+p,
+li {
+	max-width: 41rem;
+}
+
 p + p {
 	margin-top: 1rem;
 }

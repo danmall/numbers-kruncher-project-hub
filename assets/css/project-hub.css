@@ -264,6 +264,11 @@ ol li:before {
   direction: rtl;
 }
 
+p,
+li {
+  max-width: 41rem;
+}
+
 p + p {
   margin-top: 1rem;
 }
@@ -440,7 +445,6 @@ article .entry-header .entry-date {
   article .entry-header .entry-date {
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 4.75rem;
   }
 }
 article .entry-header .relative-time {

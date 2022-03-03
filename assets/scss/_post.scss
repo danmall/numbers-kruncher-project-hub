@@ -42,6 +42,9 @@ article {
 		justify-content: space-between;
 		flex-wrap: wrap;
 		gap: 1rem;
+		// @include respond-to(brook) {
+		// 	gap: 35rem;
+		// }
 		.entry-title {
 			font-size: var(--step-1);
 			position: relative;
@@ -92,7 +95,7 @@ article {
 			@include respond-to(brook) {
 				flex-direction: column;
 				align-items: flex-start;
-				margin-right: 4.75rem;
+				// margin-right: 4.75rem;
 			}
 		}
 		.relative-time {
