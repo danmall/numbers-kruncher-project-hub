@@ -11,7 +11,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="description" content="" />
-
+	<link rel="shortcut icon" href="assets/imgs/favicon.ico">
 	<!-- http://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="assets/css/variables.css" rel="stylesheet" type="text/css" />
@@ -24,11 +24,16 @@
 
 	<div class="wrap">
 		<header class="page-header" role="banner">
-			<h1 class="project-title">{{page.title}}</h1>
+			<h1 class="project-title">{{ page.title }}</h1>
+			{% if page.clientname %}
 			<h2 class="page-header-subtitle">Project Hub for {{page.clientname }}</h2>
+			{% endif %}
 			<div class="logo-wrap">
-				<h3 class="page-header-title"><a href="{{page.clienturl}}"><img src="{{page.clientlogo}}"
-							alt="Marvel Studios"></a></h3>
+				<h3 class="page-header-title">
+					<a href="{{page.clienturl}}">
+						<img src="{{page.clientlogo}}" alt="Marvel Studios">
+					</a>
+				</h3>
 				<p class="logo"><a href="{{page.sflink | default: 'https://superfriendly.com'}}">
 						<svg width="35" height="44" viewBox="0 0 35 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M34.6303 0H0V32.2665L17.3151 44L34.2608 32.2665L34.6303 0Z"
