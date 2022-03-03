@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html class="no-js" lang="en">
 <!--<![endif]-->
 
 <head>
@@ -31,11 +31,13 @@
 			<div class="logo-wrap">
 				<h3 class="page-header-title">
 					<a href="{{page.clienturl}}">
-						<img src="{{page.clientlogo}}" alt="Marvel Studios">
+						<img src="{{page.clientlogo}}" alt="{{page.clientlogo}}">
 					</a>
 				</h3>
 				<p class="logo"><a href="{{page.sflink | default: 'https://superfriendly.com'}}">
-						<svg width="35" height="44" viewBox="0 0 35 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg width="35" height="44" viewBox="0 0 35 44" fill="none" xmlns="http://www.w3.org/2000/svg"
+							aria-labelledby="projectHubLogo" role="img">
+							<title id="projectHubLogo">SuperFriendly Co.</title>
 							<path d="M34.6303 0H0V32.2665L17.3151 44L34.2608 32.2665L34.6303 0Z"
 								class="sf-background" />
 							<path d=" M23.8161 9.45461V9.44727H12.844C8.12541 9.44727 8.1254 14.4312 8.1254 14.4312C8.1254 18.2356 10.5897 19.1277
@@ -45,6 +47,7 @@
 							22.8203 19.8698 22.6881 19.8698 22.6881H15.3734V26.2098H21.9734C26.6915 26.2098 26.6915
 							21.2233 26.6915 21.2233C26.6915 17.0766 23.9913 16.4221 23.3262 16.3192L26.8619
 							16.3109V12.6701C26.8619 10.017 24.9643 9.51732 23.8161 9.45461Z" class="sf-mark" />
+
 						</svg>
 					</a>
 				</p>
