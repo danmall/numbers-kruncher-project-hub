@@ -51,7 +51,12 @@ collections:
               widget: "hidden",
               default: "about",
             }
-           - { label: "SF Logo Link", name: "sflink", widget: "string", default: "https://superfriendly.com/" }
+          - {
+              label: "SF Logo Link",
+              name: "sflink",
+              widget: "string",
+              default: "https://superfriendly.com/",
+            }
           - { label: "Client Logo", name: "clientlogo", widget: "image" }
           - { label: "Client Logo URL", name: "clienturl", widget: "string" }
           - label: "Quick Links"
