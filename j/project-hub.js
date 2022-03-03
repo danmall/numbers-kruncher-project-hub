@@ -74,7 +74,9 @@ $(document).ready(function () {
 		if (date) {
 			let relativeDate = dayjs(date).fromNow();
 			$(obj).append(
-				" <span class='relative-time'>(" + relativeDate + ")</span>",
+				" <span class='relative-time'><span class='parenthesis'>(</span>" +
+					relativeDate +
+					"<span class='parenthesis'>)</span></span>",
 			);
 		}
 	});
