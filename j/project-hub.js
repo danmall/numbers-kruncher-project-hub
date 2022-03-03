@@ -75,7 +75,6 @@ $(document).ready(function () {
 		let date = $(obj).attr("datetime");
 		if (date) {
 			let relativeDate = dayjs(date).fromNow();
-			console.log(dayjs(date).isToday());
 			if (dayjs(date).isToday()) {
 				relativeDate = "today";
 			}
