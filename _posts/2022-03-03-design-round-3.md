@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Design Round 3
 milestonedate: 2022-03-08T06:13:08.618Z
 type: latest
