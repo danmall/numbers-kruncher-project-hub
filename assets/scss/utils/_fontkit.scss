@@ -1,4 +1,5 @@
 @font-face {
+	font-display: fallback;
 	font-family: "Space Mono";
 	src: url("../fonts/spacemono-regular-webfont.woff2") format("woff2"),
 		url("../fonts/spacemono-regular-webfont.woff") format("woff");
@@ -7,6 +8,7 @@
 }
 
 @font-face {
+	font-display: fallback;
 	font-family: "Ecra";
 	src: url("../fonts/Ecra-Light.woff2") format("woff2"),
 		url("../fonts/Ecra-Light.woff") format("woff");
@@ -14,6 +16,7 @@
 	font-style: normal;
 }
 @font-face {
+	font-display: fallback;
 	font-family: "Ecra";
 	src: url("../fonts/Ecra-LightItalic.woff2") format("woff2"),
 		url("../fonts/Ecra-LightItalic.woff") format("woff");
@@ -22,6 +25,7 @@
 }
 
 @font-face {
+	font-display: fallback;
 	font-family: "Fabriga";
 	src: url("../fonts/Fabriga-Regular.woff2") format("woff2"),
 		url("../fonts/Fabriga-Regular.woff") format("woff");
@@ -30,6 +34,7 @@
 }
 
 // @font-face {
+font-display: fallback;
 // 	font-family: "Fabriga";
 // 	src: url("../fonts/Fabriga-RegularItalic.woff2") format("woff2"),
 // 		url("../fonts/Fabriga-RegularItalic.woff") format("woff");
@@ -38,6 +43,7 @@
 // }
 
 @font-face {
+	font-display: fallback;
 	font-family: "Fabriga";
 	src: url("../fonts/Fabriga-Medium.woff2") format("woff2"),
 		url("../fonts/Fabriga-Medium.woff") format("woff");
@@ -46,6 +52,7 @@
 }
 
 // @font-face {
+font-display: fallback;
 // 	font-family: "Fabriga";
 // 	src: url("../fonts/Fabriga-MediumItalic.woff2") format("woff2"),
 // 		url("../fonts/Fabriga-MediumItalic.woff") format("woff");
@@ -54,6 +61,7 @@
 // }
 
 // @font-face {
+font-display: fallback;
 // 	font-family: "Fabriga";
 // 	src: url("../fonts/Fabriga-BoldItalic.woff2") format("woff2"),
 // 		url("../fonts/Fabriga-BoldItalic.woff") format("woff");
@@ -62,6 +70,7 @@
 // }
 
 // @font-face {
+font-display: fallback;
 // 	font-family: "Fabriga";
 // 	src: url("../fonts/Fabriga-Bold.woff2") format("woff2"),
 // 		url("../fonts/Fabriga-Bold.woff") format("woff");
