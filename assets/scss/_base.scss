@@ -109,3 +109,12 @@ li {
 p + p {
 	margin-top: 1rem;
 }
+
+::selection {
+	background: var(--alias-color-cursorHighlight);
+	color: var(--alias-backdrop-color);
+	background: white;
+	color: black;
+	background: var(--highlight);
+	color: var(--background);
+}

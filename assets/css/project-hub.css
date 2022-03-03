@@ -82,6 +82,7 @@ Vocabulary options: pond, brook, creek, gulf, sea.
   --light: rgb(255, 255, 255);
   --light-rgb: 255, 255, 255;
   --dark: rgba(0, 0, 0, 0.2);
+  --highlight: #ffd700;
   --step--1: 0.75rem;
   --base: 16px;
   --step-0: clamp(1.125rem, 1.2vw, 12rem);
@@ -271,6 +272,15 @@ li {
 
 p + p {
   margin-top: 1rem;
+}
+
+::selection {
+  background: var(--alias-color-cursorHighlight);
+  color: var(--alias-backdrop-color);
+  background: white;
+  color: black;
+  background: var(--highlight);
+  color: var(--background);
 }
 
 .page-header {
