@@ -5,6 +5,10 @@ article {
 
 	&.entry-future {
 		opacity: 0.55;
+		transition: all 0.25s linear;
+		&:hover {
+			opacity: 1;
+		}
 	}
 	&:last-of-type {
 		&:after,

@@ -357,6 +357,10 @@ article {
 }
 article.entry-future {
   opacity: 0.55;
+  transition: all 0.25s linear;
+}
+article.entry-future:hover {
+  opacity: 1;
 }
 article:last-of-type:after,
 article:last-of-type footer {
