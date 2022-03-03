@@ -50,6 +50,8 @@ $(document).ready(function () {
 	// adds data meta to indicate how long from now the date is
 	dayjs.extend(window.dayjs_plugin_relativeTime);
 	dayjs.extend(window.dayjs_plugin_updateLocale);
+	dayjs.extend(window.dayjs_plugin_isToday);
+
 	dayjs.updateLocale("en", {
 		relativeTime: {
 			future: "%s from now",
@@ -73,6 +75,10 @@ $(document).ready(function () {
 		let date = $(obj).attr("datetime");
 		if (date) {
 			let relativeDate = dayjs(date).fromNow();
+			console.log(dayjs(date).isToday());
+			if (dayjs(date).isToday()) {
+				relativeDate = "today";
+			}
 			$(obj).append(
 				" <span class='relative-time'><span class='parenthesis'>(</span>" +
 					relativeDate +
