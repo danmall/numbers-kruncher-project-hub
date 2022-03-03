@@ -26,7 +26,7 @@ collections:
       - label: "Files"
         name: "files"
         widget: "list"
-        summary: "{{fields.image}}"
+        summary: "{{fields.filename}}"
         fields:
           - { label: File, name: fileupload, widget: file }
           - { label: File Name, name: filename, widget: string }
@@ -51,4 +51,13 @@ collections:
               widget: "hidden",
               default: "about",
             }
-          - { label: "Body", name: "body", widget: "markdown" }
+           - { label: "SF Logo Link", name: "sflink", widget: "string", default: "https://superfriendly.com/" }
+          - { label: "Client Logo", name: "clientlogo", widget: "image" }
+          - { label: "Client Logo URL", name: "clienturl", widget: "string" }
+          - label: "Quick Links"
+            name: "quicklinks"
+            widget: "list"
+            summary: "{{fields.linktext}}"
+            fields:
+              - { label: Link, name: link, widget: string }
+              - { label: Link Text, name: linktext, widget: string }
