@@ -53,22 +53,28 @@
 
 .quick-links {
 	order: 3;
+	font-family: var(--headings);
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline;
+			&:before {
+				display: none;
+			}
+		}
+		li + li {
+			&:before {
+				display: inline;
+				content: "●";
+				color: var(--global-color-brand-primary, var(--primary));
+				padding: 0 0.42rem 0;
+				margin-left: 0.01rem;
+			}
+		}
+	}
 	@include respond-to(gulf) {
 		margin-left: 12vw;
-	}
-}
-
-.quick-links {
-	font-family: var(--headings);
-	list-style: none;
-	li {
-		display: inline;
-	}
-	li + li {
-		&:before {
-			content: "●";
-			color: var(--global-color-brand-primary, var(--primary));
-			padding: 0 0.42rem 0 0.3rem;
-		}
 	}
 }

@@ -55,9 +55,11 @@
 			</div>
 			{% if page.quicklinks %}
 			<nav class="quick-links">
-				{% for link in page.quicklinks %}
-				<li><a href="{{link.link}}">{{link.linktext}}</a></li>
-				{% endfor %}
+				<ul>
+					{% for link in page.quicklinks %}
+					<li><a href="{{link.link}}">{{link.linktext}}</a></li>
+					{% endfor %}
+				</ul>
 			</nav>
 			{% endif %}
 		</header>
