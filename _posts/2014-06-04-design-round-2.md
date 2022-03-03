@@ -1,7 +1,8 @@
 ---
-title: Design Round 1
 layout: default
-type: latest
+title: Design Round 1
+date: 2022-03-03T04:58:03.099Z
+type: complete
 ---
 
 Lorem ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet ipsum dolor sit amet.
