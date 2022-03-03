@@ -18,7 +18,7 @@
 	font-size: var(--step--1);
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	font-weight: bold;
+	font-weight: 500;
 	@include respond-to(gulf) {
 		margin-left: 12vw;
 	}

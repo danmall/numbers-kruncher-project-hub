@@ -15,13 +15,14 @@ article {
 		content: "";
 		display: block;
 		width: 44px;
-		height: 44px;
+		height: 45px;
 		border: 1px solid var(--background);
 		border-radius: 20px;
 		background: var(--background);
 		position: absolute;
 		left: -3.85rem;
-		top: calc(2.8125rem + 0.2rem);
+		// top: calc(2.8125rem + 0.2rem);
+		top: 3rem;
 	}
 	&:after {
 		content: "";
@@ -42,6 +43,7 @@ article {
 		gap: 1rem;
 		.entry-title {
 			font-size: var(--step-1);
+			position: relative;
 			&:before {
 				content: "";
 				display: block;
@@ -52,26 +54,40 @@ article {
 				background: var(--global-color-brand-primary, var(--primary));
 				position: absolute;
 				left: calc((4.6rem - 1.125rem) * -1);
-				top: calc(0.5rem + 2.8125rem);
+				// top: calc(0.5rem + 2.8125rem);
+				top: 0.6rem;
+				@include respond-to(gulf) {
+					left: calc((12vw - 1rem) * -1);
+				}
 			}
 			&:after {
-				content: var(--complete);
-				width: 9px;
-				height: 14px;
+				// content: var(--complete);
+				content: "";
+				background: var(--complete) no-repeat;
+				// width: 9px;
+				// height: 14px;
+				width: 18px;
+				height: 18px;
 				position: absolute;
 				left: -47px;
-				top: calc(2.8125rem + -3px);
-				@include respond-to(ocean) {
-					top: calc(2.8125rem + 10px);
+				// top: calc(2.8125rem + -3px);
+				top: 1rem;
+				@include respond-to(gulf) {
+					left: calc((12vw - 1.5rem) * -1);
 				}
 			}
 		}
 		.entry-date {
 			display: flex;
 			align-items: center;
-			gap: 0.2rem;
+			gap: 0.25rem;
 			font-family: var(--headings);
 			font-weight: 500;
+			.parenthesis {
+				@include respond-to(brook) {
+					display: none;
+				}
+			}
 			@include respond-to(brook) {
 				flex-direction: column;
 				align-items: flex-start;

@@ -18,8 +18,8 @@ h6 {
 }
 
 h1 {
-	font-weight: bold;
-	font-size: clamp(7.2rem, 10vw, 14.4rem);
+	font-weight: 500;
+	font-size: var(--step-2);
 	letter-spacing: -0.05em;
 	line-height: var(--step-2);
 }
@@ -38,6 +38,7 @@ h3 {
 a {
 	color: var(--primary);
 	transition: all 0.25s linear;
+	text-decoration-color: rgba(var(--light-rgb), 0.3);
 	&:hover {
 		color: var(--light);
 	}
@@ -68,6 +69,7 @@ ul,
 ol {
 	list-style: none;
 	line-height: 2rem;
+	padding-inline-start: 1em;
 }
 
 ul {

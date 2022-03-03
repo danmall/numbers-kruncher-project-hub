@@ -79,19 +79,20 @@ Vocabulary options: pond, brook, creek, gulf, sea.
   --secondary: #37526a;
   --detail: #3a4147;
   --background: #141e27;
-  --light: #fff;
+  --light: rgb(255, 255, 255);
+  --light-rgb: 255, 255, 255;
   --dark: rgba(0, 0, 0, 0.2);
   --step--1: 0.75rem;
   --base: 16px;
   --step-0: clamp(1.125rem, 1.2vw, 12rem);
   --step-1: clamp(2rem, 2vw, 2.4rem);
-  --step-2: clamp(7.2rem, 10vw, 14.4rem);
+  --step-2: clamp(4rem, 10vw, 14.4rem);
   --line-height: 1.375rem;
   --body: "Ecra", sans-serif;
   --headings: "Fabriga", serif;
   --monospace: "Space Mono", monospace;
   --padding: 1.125rem;
-  --complete: url("data:image/svg+xml,%3Csvg width='17' height='18' viewBox='0 0 17 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.11269' y='9.3032' width='9' height='3' transform='rotate(40 2.11269 9.3032)' fill='%23141E27'/%3E%3Crect x='4.78059' y='15.4581' width='14' height='3' transform='rotate(-50 4.78059 15.4581)' fill='%23141E27'/%3E%3C/svg%3E%0A");
+  --complete: url("data:image/svg+xml,%3Csvg viewBox='0 0 17 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2.11269' y='9.3032' width='9' height='3' transform='rotate(40 2.11269 9.3032)' fill='%23141E27'/%3E%3Crect x='4.78059' y='15.4581' width='14' height='3' transform='rotate(-50 4.78059 15.4581)' fill='%23141E27'/%3E%3C/svg%3E%0A");
 }
 
 /* Box sizing rules */
@@ -185,8 +186,8 @@ h6 {
 }
 
 h1 {
-  font-weight: bold;
-  font-size: clamp(7.2rem, 10vw, 14.4rem);
+  font-weight: 500;
+  font-size: var(--step-2);
   letter-spacing: -0.05em;
   line-height: var(--step-2);
 }
@@ -205,6 +206,7 @@ h3 {
 a {
   color: var(--primary);
   transition: all 0.25s linear;
+  text-decoration-color: rgba(var(--light-rgb), 0.3);
 }
 a:hover {
   color: var(--light);
@@ -234,6 +236,7 @@ ul,
 ol {
   list-style: none;
   line-height: 2rem;
+  padding-inline-start: 1em;
 }
 
 ul li:before {
@@ -287,7 +290,7 @@ p + p {
   font-size: var(--step--1);
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-weight: bold;
+  font-weight: 500;
 }
 @media (min-width: 1000px) {
   .page-header-subtitle {
@@ -357,13 +360,13 @@ article:before {
   content: "";
   display: block;
   width: 44px;
-  height: 44px;
+  height: 45px;
   border: 1px solid var(--background);
   border-radius: 20px;
   background: var(--background);
   position: absolute;
   left: -3.85rem;
-  top: 3.0125rem;
+  top: 3rem;
 }
 article:after {
   content: "";
@@ -387,6 +390,7 @@ article .entry-header {
 }
 article .entry-header .entry-title {
   font-size: var(--step-1);
+  position: relative;
 }
 article .entry-header .entry-title:before {
   content: "";
@@ -398,27 +402,38 @@ article .entry-header .entry-title:before {
   background: var(--global-color-brand-primary, var(--primary));
   position: absolute;
   left: -3.475rem;
-  top: 3.3125rem;
+  top: 0.6rem;
+}
+@media (min-width: 1000px) {
+  article .entry-header .entry-title:before {
+    left: calc((12vw - 1rem) * -1);
+  }
 }
 article .entry-header .entry-title:after {
-  content: var(--complete);
-  width: 9px;
-  height: 14px;
+  content: "";
+  background: var(--complete) no-repeat;
+  width: 18px;
+  height: 18px;
   position: absolute;
   left: -47px;
-  top: calc(2.8125rem - 3px);
+  top: 1rem;
 }
-@media (min-width: 1700px) {
+@media (min-width: 1000px) {
   article .entry-header .entry-title:after {
-    top: calc(2.8125rem + 10px);
+    left: calc((12vw - 1.5rem) * -1);
   }
 }
 article .entry-header .entry-date {
   display: flex;
   align-items: center;
-  gap: 0.2rem;
+  gap: 0.25rem;
   font-family: var(--headings);
   font-weight: 500;
+}
+@media (min-width: 500px) {
+  article .entry-header .entry-date .parenthesis {
+    display: none;
+  }
 }
 @media (min-width: 500px) {
   article .entry-header .entry-date {
