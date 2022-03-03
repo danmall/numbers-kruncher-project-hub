@@ -24,12 +24,12 @@
 
 	<div class="wrap">
 		<header class="page-header" role="banner">
-			<h1 class="project-title">Jarvis, Mark 4 wraps lines</h1>
-			<h2 class="page-header-subtitle">Project Hub for Marvel Studios</h2>
+			<h1 class="project-title">{{page.title}}</h1>
+			<h2 class="page-header-subtitle">Project Hub for {{page.clientname }}</h2>
 			<div class="logo-wrap">
-				<h3 class="page-header-title"><a href=""><img src="assets/imgs/marvelstudios.svg"
+				<h3 class="page-header-title"><a href="{{page.clienturl}}"><img src="{{page.clientlogo}}"
 							alt="Marvel Studios"></a></h3>
-				<p class="logo"><a href="https://superfriendly.com/">
+				<p class="logo"><a href="{{page.sflink | default: 'https://superfriendly.com'}}">
 						<svg width="35" height="44" viewBox="0 0 35 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M34.6303 0H0V32.2665L17.3151 44L34.2608 32.2665L34.6303 0Z"
 								class="sf-background" />
@@ -44,11 +44,13 @@
 					</a>
 				</p>
 			</div>
+			{% if page.quicklinks %}
 			<nav class="quick-links">
-				<li><a href="">QA Spreadsheet</a></li>
-				<li><a href="">March 1 Deliverables & Fast Follows</a></li>
-				<li><a href="">Project plan v2 Revised</a></li>
+				{% for link in page.quicklinks %}
+				<li><a href="{{link.link}}">{{link.linktext}}</a></li>
+				{% endfor %}
 			</nav>
+			{% endif %}
 		</header>
 
 		<main role="main" class="main">

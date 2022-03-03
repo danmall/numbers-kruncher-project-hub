@@ -40,22 +40,28 @@ collections:
         file: "index.md"
         fields:
           - {
-              label: "Title",
+              label: "Project Title",
               name: "title",
-              widget: "hidden",
-              default: "about",
+              widget: "string",
+              default: "Jarvis, Mark 4 wraps lines",
             }
           - {
               label: "Layout",
               name: "layout",
               widget: "hidden",
-              default: "about",
+              default: "default",
             }
           - {
               label: "SF Logo Link",
               name: "sflink",
               widget: "string",
               default: "https://superfriendly.com/",
+            }
+          - {
+              label: "Client Name",
+              name: "clientname",
+              widget: "string",
+              default: "Marvel Studios",
             }
           - { label: "Client Logo", name: "clientlogo", widget: "image" }
           - { label: "Client Logo URL", name: "clienturl", widget: "string" }
