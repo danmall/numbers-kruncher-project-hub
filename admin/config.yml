@@ -14,7 +14,7 @@ collections:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Milestone Date", name: "milestonedate", widget: "date" }
       - label: "Milestone Type"
         name: "type"
         widget: "select"
@@ -22,14 +22,21 @@ collections:
           - { label: "Latest", value: "latest" }
           - { label: "Future", value: "future" }
           - { label: "Complete", value: "complete" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
       - label: "Files"
+        required: false
         name: "files"
         widget: "list"
         summary: "{{fields.filename}}"
         fields:
           - { label: File, name: fileupload, widget: file }
           - { label: File Name, name: filename, widget: string }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          hint: "Leave this alone",
+        }
   - name: "pages"
     label: "Pages"
     editor:

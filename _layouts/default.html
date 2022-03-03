@@ -64,8 +64,11 @@
 			<article class="entry entry-{{post.type}}">
 				<header class="entry-header">
 					<h2 class="entry-title">{{ post.title}}</h2>
-					<p class="entry-date" datetime="{{post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %-d, %Y"
-						}}</p>
+					{% if post.milestonedate %}
+					<p class="entry-date" datetime="{{post.milestonedate | date: '%Y-%m-%d' }}">
+						{{ post.milestonedate | date: "%B %-d, %Y" }}
+					</p>
+					{% endif %}
 				</header>
 
 				<div class="entry-content">
