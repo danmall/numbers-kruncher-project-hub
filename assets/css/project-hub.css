@@ -435,6 +435,7 @@ article .entry-header .entry-date {
   gap: 0.25rem;
   font-family: var(--headings);
   font-weight: 500;
+  flex-wrap: wrap;
 }
 @media (min-width: 500px) {
   article .entry-header .entry-date .parenthesis {

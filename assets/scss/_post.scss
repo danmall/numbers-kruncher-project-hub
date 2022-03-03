@@ -87,6 +87,7 @@ article {
 			gap: 0.25rem;
 			font-family: var(--headings);
 			font-weight: 500;
+			flex-wrap: wrap;
 			.parenthesis {
 				@include respond-to(brook) {
 					display: none;
@@ -95,6 +96,7 @@ article {
 			@include respond-to(brook) {
 				flex-direction: column;
 				align-items: flex-start;
+
 				// margin-right: 4.75rem;
 			}
 		}
