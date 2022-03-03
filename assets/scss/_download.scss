@@ -17,6 +17,7 @@
 	}
 	&:hover {
 		background-color: var(--light);
+		color: var(--background);
 		svg {
 			animation: bounce2 2s ease infinite;
 			fill: var(--global-color-brand-primary, var(--primary));

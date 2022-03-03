@@ -482,6 +482,7 @@ article footer {
 }
 .download:hover {
   background-color: var(--light);
+  color: var(--background);
 }
 .download:hover svg {
   animation: bounce2 2s ease infinite;
