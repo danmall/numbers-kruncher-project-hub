@@ -1,7 +1,7 @@
 .download {
 	display: flex;
 	align-items: center;
-	background-color: var(--global-color-brand-primary, var(--primary));
+	background-color: var(--primary);
 	padding: var(--padding);
 	color: var(--background);
 	font-size: var(--step-0);
@@ -19,7 +19,7 @@
 		color: var(--background);
 		svg {
 			animation: bounce2 2s ease infinite;
-			fill: var(--global-color-brand-primary, var(--primary));
+			fill: var(--primary);
 		}
 	}
 }

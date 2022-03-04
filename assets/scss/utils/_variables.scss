@@ -1,11 +1,12 @@
 /*
-This map is used for a mobile first responsive coding
-approach mixin in _mixins.scss. Breakpoint names are
-inspired by bodies of water, because they expand and
-shrink with the weather. These denote some default
-screen breaks. More can be added if needed.
+ * This map is used for a mobile first responsive coding
+ * approach mixin in _mixins.scss. Breakpoint names are
+ * inspired by bodies of water, because they expand and
+ * shrink with the weather. These denote some default
+ * screen breaks. More can be added if needed.
 
-Vocabulary options: pond, brook, creek, gulf, sea.
+ * Vocabulary options: pond, brook, creek, gulf, sea.
+ * @author Aurooba Ahmed <https://aurooba.com>
 */
 $breakpoints: (
 	"stream": 320px,
@@ -17,10 +18,7 @@ $breakpoints: (
 	"ocean": 1700px,
 );
 
-/// This a a map of the theme colours.
-/// Never name variables by colour, instead use names
-/// that signify their usage.
-
+/// --sf-decision-color-mainBrandColor comes from Arcade, but there is a fallback just in case.
 :root {
 	//Colours
 	--primary-fallback: rgb(49, 207, 181);

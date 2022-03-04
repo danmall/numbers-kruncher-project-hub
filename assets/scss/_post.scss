@@ -3,19 +3,14 @@ article {
 	position: relative;
 	padding-top: 2.8125rem;
 
-	&.entry-future {
-		opacity: 0.55;
-		transition: all 0.25s linear;
-		&:hover {
-			opacity: 1;
-		}
-	}
 	&:last-of-type {
 		&:after,
 		footer {
 			display: none;
 		}
 	}
+
+	// Creates the timeline look for each Milestone
 	&:before {
 		content: "";
 		display: block;
@@ -26,7 +21,6 @@ article {
 		background: var(--background);
 		position: absolute;
 		left: -3.85rem;
-		// top: calc(2.8125rem + 0.2rem);
 		top: 3rem;
 	}
 	&:after {
@@ -52,6 +46,8 @@ article {
 		.entry-title {
 			font-size: var(--step-1);
 			position: relative;
+
+			// creates the checkmark beside each Milestone Title
 			&:before {
 				content: "";
 				display: block;
@@ -62,23 +58,18 @@ article {
 				background: var(--global-color-brand-primary, var(--primary));
 				position: absolute;
 				left: calc((4.6rem - 1.125rem) * -1);
-				// top: calc(0.5rem + 2.8125rem);
 				top: 0.6rem;
 				@include respond-to(gulf) {
 					left: calc((12vw - 1rem) * -1);
 				}
 			}
 			&:after {
-				// content: var(--complete);
 				content: "";
 				background: var(--complete) no-repeat;
-				// width: 9px;
-				// height: 14px;
 				width: 18px;
 				height: 18px;
 				position: absolute;
 				left: -47px;
-				// top: calc(2.8125rem + -3px);
 				top: 1rem;
 				@include respond-to(gulf) {
 					left: calc((12vw - 1.5rem) * -1);
@@ -100,8 +91,6 @@ article {
 			@include respond-to(brook) {
 				flex-direction: column;
 				align-items: flex-start;
-
-				// margin-right: 4.75rem;
 			}
 		}
 		.relative-time {
@@ -115,9 +104,16 @@ article {
 			max-width: 80%;
 		}
 	}
-	&.entry-future .entry-title:before {
-		border-color: var(--global-color-brand-primary, var(--primary));
-		background: transparent;
+	&.entry-future {
+		opacity: 0.55;
+		transition: all 0.25s linear;
+		&:hover {
+			opacity: 1;
+		}
+		.entry-title:before {
+			border-color: var(--global-color-brand-primary, var(--primary));
+			background: transparent;
+		}
 	}
 	footer {
 		padding-top: 2.5625rem;

@@ -2,6 +2,12 @@
 /// from within each applicable selector.
 /// It pulls breakpoints from a map of breakpoints set in _variables.scss
 
+/**
+ * This mixin assumes mobile-first coding, and helps you respond to different breakpoints from within each applicable selector.
+ * It pulls breakpoints from a map of breakpoints set in _variables.scss
+ * @author Aurooba Ahmed <https://aurooba.com>
+ */
+
 @mixin respond-to($breakpoint) {
 	// Retrieves the value of the breakpoint
 	$value: map-get($breakpoints, $breakpoint);
@@ -21,20 +27,7 @@
 	}
 }
 
-//Fade in on load
-
-@mixin fadeinload {
-	animation: fadein 2s;
-	@keyframes fadein {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-}
-
+// Animation for the download arrow icon (_download.scss)
 @keyframes bounce2 {
 	0%,
 	20%,

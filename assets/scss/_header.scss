@@ -69,7 +69,7 @@
 			&:before {
 				display: inline;
 				content: "●";
-				color: var(--global-color-brand-primary, var(--primary));
+				color: var(--primary);
 				padding: 0 0.42rem 0;
 				margin-left: 0.01rem;
 			}
