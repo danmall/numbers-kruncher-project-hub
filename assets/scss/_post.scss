@@ -46,9 +46,9 @@ article {
 		justify-content: space-between;
 		flex-wrap: wrap;
 		gap: 1rem;
-		// @include respond-to(brook) {
-		// 	gap: 35rem;
-		// }
+		@include respond-to(gulf) {
+			max-width: 90%;
+		}
 		.entry-title {
 			font-size: var(--step-1);
 			position: relative;
