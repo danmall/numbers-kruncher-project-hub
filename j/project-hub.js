@@ -40,6 +40,7 @@ var Site = function () {
 
 /**
  * Create relative time language for each milestone date
+ * @author Aurooba Ahmed <https://aurooba.com>
  */
 var RelativeMilestoneDates = function () {
 	this.init = function () {
