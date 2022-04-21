@@ -74,10 +74,21 @@ collections:
           - label: "Quick Links"
             name: "quicklinks"
             widget: "list"
-            summary: "{{fields.linktext}}"
-            fields:
-              - { label: Link, name: link, widget: string }
-              - { label: Link Text, name: linktext, widget: string }
+            types:
+              - label: "Link"
+                name: "quicklinks_link"
+                widget: object
+                summary: "{{fields.linktext}}"
+                fields:
+                  - { label: Link, name: link, widget: string }
+                  - { label: Link Text, name: linktext, widget: string }
+              - label: "File"
+                name: "quicklinks_file"
+                summary: "{{fields.linktext}}"
+                widget: object
+                fields:
+                  - { label: File, name: fileupload, widget: file }
+                  - { label: File Name, name: linktext, widget: string }
           - {
               label: "SF Logo Link",
               name: "sflink",
