@@ -11,5 +11,11 @@ quicklinks:
     link: "#"
   - linktext: Project plan v2 Revised
     link: "#"
+  - type: quicklinks_link
+    link: https://aurooba.com
+    linktext: Aurooba Link
+  - type: quicklinks_file
+    fileupload: /assets/imgs/uploads/marvelstudios.svg
+    linktext: Marvel Image File
 sflink: ""
 ---
