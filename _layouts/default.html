@@ -57,7 +57,7 @@
 			<nav class="quick-links">
 				<ul>
 					{% for link in page.quicklinks %}
-					<li><a href="{{link.link}}">{{link.linktext}}</a></li>
+					<li><a rel="noopener" target="_blank" href="{{link.link}}">{{link.linktext}}</a></li>
 					{% endfor %}
 				</ul>
 			</nav>
@@ -82,7 +82,7 @@
 					{% if post.files %}
 					<div class="files">
 						{% for file in post.files %}
-						<a href="{{file.fileupload}}" download class="download">
+						<a target="_blank" rel="noopener" href="{{file.fileupload}}" download class="download">
 							<svg aria-hidden="true" focusable="false" width="18" height="28" viewBox="0 0 18 28"
 								fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd"
