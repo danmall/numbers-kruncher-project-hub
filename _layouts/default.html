@@ -57,8 +57,12 @@
 			<nav class="quick-links">
 				<ul>
 					{% for link in page.quicklinks %}
-					{{link}}
-					<!-- <li><a rel="noopener" target="_blank" href="{{link.link}}">{{link.linktext}}</a></li> -->
+					{% if link.type == "quicklinks_link" %}
+					<li><a rel="noopener" target="_blank" href="{{link.link}}">{{link.linktext}}</a></li>
+					{% endif %}
+					{% if link.type == "quicklinks_file" %}
+					<li><a rel="noopener" target="_blank" href="{{link.fileupload}}" download>{{link.linktext}}</a></li>
+					{% endif %}
 					{% endfor %}
 				</ul>
 			</nav>
