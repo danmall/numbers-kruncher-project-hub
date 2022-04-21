@@ -5,11 +5,14 @@ clientname: Marvel Studios
 clientlogo: /assets/imgs/uploads/marvelstudios.svg
 clienturl: https://superfriendly.com/
 quicklinks:
-  - link: "#"
+  - type: "quicklinks_link"
+  	link: "#"
     linktext: March 1 Deliverables & Fast Follows
-  - linktext: QA Spreadsheet
+  - type: "quicklinks_link"
+  	linktext: QA Spreadsheet
     link: "#"
-  - linktext: Project plan v2 Revised
+  - type: "quicklinks_link"
+  	linktext: Project plan v2 Revised
     link: "#"
   - type: quicklinks_link
     link: https://aurooba.com
