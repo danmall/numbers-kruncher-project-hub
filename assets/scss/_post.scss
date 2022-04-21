@@ -100,6 +100,9 @@ article {
 	}
 	.entry-content {
 		margin-top: 1.5rem;
+		& > * + * {
+			margin-top: 1rem;
+		}
 		@include respond-to(brook) {
 			max-width: 80%;
 		}
